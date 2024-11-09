@@ -23,6 +23,16 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
+//// Custom task to build the Angular frontend
+//tasks.register('buildFrontend', Exec) {
+//	workingDir 'src/main/frontend' // Adjust this path if necessary
+//	commandLine 'npm', 'install'
+//	commandLine 'npm', 'run', 'build'
+//}
+//
+//// Ensure the buildFrontend task runs before processResources
+//processResources.dependsOn buildFrontend
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
